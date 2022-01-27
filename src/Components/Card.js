@@ -4,7 +4,6 @@ import {
 } from 'reactstrap';
 
 function RederCard({ data }) {
-	console.log(data.image);
 	return (
 		<div>
 			<Card>
@@ -22,7 +21,7 @@ function RederCard({ data }) {
 function Cards(props) {
 	const product = props.data.map(data => {
 		return (
-			<div className="col-md-4 col-lg-4 col-xl-4 my-2">
+			<div className="col-md-4 col-lg-4 col-xl-4 my-2" key={data.id}>
 				<RederCard data={data} />
 			</div>
 		)

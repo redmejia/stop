@@ -11,3 +11,7 @@ body {
   font-weight: 800;
 }
 
+
+.nav-items {
+  float: left;
+}

@@ -1,20 +1,20 @@
 import React from 'react';
 
-import {data} from '../shared/data';
+import { data } from '../shared/data';
 import Cards from './Card';
 
-class Main extends React.Component{
-	constructor(props){
+class Main extends React.Component {
+	constructor(props) {
 		super(props);
 		this.state = {
-			data : data,
+			data: data,
 		}
 	}
-	render(){
-		return(
-		<div className='container'>
-			<Cards data={this.state.data} />
-		</div>
+	render() {
+		return (
+			<div className='container'>
+				<Cards data={this.state.data} />
+			</div>
 		);
 	}
 }
