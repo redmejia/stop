@@ -23,7 +23,9 @@ class Login extends React.Component {
 	render() {
 		return (
 			<div>
-				<Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+				<button className='user-btn btn-danger' onClick={this.toggle}><img src='/assets/stop/person-fill.svg' alt='usert'/></button>
+				
+			
 				<Modal size='xl' isOpen={this.state.modal} toggle={this.toggle}>
 					<ModalHeader toggle={this.toggle} className='bg-dark '>
 						<img className='ml-auto' src="/assets/stop/stop-log.svg" width="40" alt="stop logo" />

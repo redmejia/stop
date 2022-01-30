@@ -15,3 +15,11 @@ body {
 .nav-items {
   float: left;
 }
+
+
+.user-btn{
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  text-align: center;
+}
