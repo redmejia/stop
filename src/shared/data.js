@@ -44,35 +44,37 @@ export const pants = [
 		name: "pant1",
 		sizes: [28, 30, 32, 38],
 		price: 53,
-		image: "image"
+		image: "/assets/image/pants-unsplash.jpg"
 	},
 	{
 		id: 2,
 		name: "pant3",
 		sizes: [28, 30, 32, 38],
 		price: 19,
-		image: "image"
+		image: "/assets/image/pants-unsplash.jpg"
 	},
 	{
 		id: 3,
 		name: "pant4",
 		sizes: [28, 30, 32, 38],
 		price: 35,
-		image: "image"
+		image: "/assets/image/pants-unsplash.jpg"
+
 	},
 	{
-		id: 5,
+		id: 4,
 		name: "pant5",
 		sizes: [28, 30, 32, 38],
 		price: 53.53,
-		image: "image"
+		image: "/assets/image/pants-unsplash.jpg"
+
 	},
 	{
 		id: 5,
 		name: "pant6",
 		sizes: [28, 30, 32, 38],
 		price: 88.0,
-		image: "image"
+		image: "/assets/image/pants-unsplash.jpg"
 	}
 ]
 // shirts

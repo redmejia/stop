@@ -1,5 +1,6 @@
 import React from 'react';
-import { Nav, Navbar, NavbarBrand, NavLink, NavbarToggler, Collapse, NavItem } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
+import { NavLink } from "react-router-dom";
 import Login from './Login';
 
 function HeaderImage() {
@@ -7,15 +8,15 @@ function HeaderImage() {
 		<>
 			<img src='/assets/image/unsplash-stop-bags.jpg' alt='headerImage' style={{ width: '100%', height: '100vh', objectFit: 'fill' }} />
 			<div className='top-header-text'>
-				<span class="text-white text-center bg-dark w-100 p-2"> Stop </span>
-				<p class="text-danger text-uppercase  text-sm-left text-md-left text-xl-left d-none d-sm-block">
+				<span className="text-white text-center bg-dark w-100 p-2"> Stop </span>
+				<p className="text-danger text-uppercase  text-sm-left text-md-left text-xl-left d-none d-sm-block">
 					final reduction
 				</p>
-				<p class="text-danger text-uppercase text-sm-left text-md-left text-xl-left">up to 50% off sales</p>
-				<div class="row">
-					<div class="col text-center">
+				<p className="text-danger text-uppercase text-sm-left text-md-left text-xl-left">up to 50% off sales</p>
+				<div className="row">
+					<div className="col text-center">
 						{/* links this button to the link to the products cards */}
-						<a href="#product" class="btn btn-success text-uppercase text-center font-weight-bold"> shop now
+						<a href="#product" className="btn btn-success text-uppercase text-center font-weight-bold"> shop now
 						</a>
 					</div>
 				</div>
@@ -52,17 +53,18 @@ class Header extends React.Component {
 							<Collapse  className='d-flex justify-content-end' isOpen={this.state.isNavOpen} navbar>
 								<Nav  navbar>
 									<NavItem>
-										<NavLink style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} href='#'>
-											pants/jeans
+										<NavLink className="nav-link" style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} to="/pants">
+											pants/jeans{" "}
+										</NavLink>
+									</NavItem>
+									
+									<NavItem>
+										<NavLink  className="nav-link"  style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} to="/shirts">
+											Tshirts {" "}
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} href='#'>
-											Tshirts
-										</NavLink>
-									</NavItem>
-									<NavItem>
-										<NavLink style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} href='#'>
+										<NavLink  className="nav-link" style={{ color: 'red', fontSize: '1.5rem', fontWeight: 'bold' }} to="/">
 											<Login />
 										</NavLink>
 									</NavItem>
