@@ -84,34 +84,34 @@ export const shirts = [
 		name: "shirt1",
 		sizes: ['S', 'M', 'L'],
 		price: 12,
-		image: "image"
+		image: "/assets/image/seven-unsplash.jpg"
 	},
 	{
 		id: 2,
 		name: "shirt3",
 		sizes: ['S', 'M', 'L'],
 		price: 13,
-		image: "image"
+		image: "/assets/image/seven-unsplash.jpg"
 	},
 	{
 		id: 3,
 		name: "shirt4",
 		sizes: ['S', 'M', 'L'],
 		price: 15,
-		image: "image"
+		image: "/assets/image/seven-unsplash.jpg"
 	},
 	{
 		id: 4,
 		name: "shirt5",
 		sizes: ['S', 'M', 'L'],
 		price: 10,
-		image: "image"
+		image: "/assets/image/seven-unsplash.jpg"
 	},
 	{
 		id: 5,
 		name: "shirt6",
 		sizes: ['S', 'M', 'L'],
 		price: 19,
-		image: "image"
+		image: "/assets/image/seven-unsplash.jpg"
 	}
 ]
