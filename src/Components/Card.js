@@ -5,7 +5,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-function RederCard({ data, showButton, linkTo }) {
+const RenderCard = ({ data, showButton, linkTo }) => {
 	console.log(linkTo);
 	return (
 		<div>
@@ -26,7 +26,7 @@ function RederCard({ data, showButton, linkTo }) {
 						</Link>
 					</Card>
 					:
-					// link to is after clik link undefined
+					// link to is after click link undefined
 					<Card>
 						<CardImg top width="100%" src={data.image} alt="Cardimage cap" />
 						<CardBody>
@@ -39,17 +39,17 @@ function RederCard({ data, showButton, linkTo }) {
 							}
 						</CardBody>
 					</Card>
-					
+
 			}
 		</div>
 	);
 }
 
-function Cards(props) {
+const Cards = (props) => {
 	const product = props.data.map(data => {
 		return (
 			<div className="col-md-4 col-lg-4 col-xl-4 my-2" key={data.id}>
-				<RederCard data={data} showButton={props.showButton} linkTo={props.linkTo} />
+				<RenderCard data={data} showButton={props.showButton} linkTo={props.linkTo} />
 			</div>
 		)
 	})
