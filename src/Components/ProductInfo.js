@@ -8,9 +8,9 @@ const RenderOption = ({ option, selectOption }) => {
 		<div>
 			<ButtonToolbar >
 				<ButtonGroup>
-					<Button style={{color : 'red', fontWeight : 'bold', fontSize : '1rem', backgroundColor : '#212529'}} onClick={() => selectOption(option)}>
-						  {option} 
-						</Button>
+					<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }} onClick={() => selectOption(option)}>
+						{option}
+					</Button>
 				</ButtonGroup>
 			</ButtonToolbar>
 		</div>
@@ -31,17 +31,20 @@ const ProductInfo = ({ data }) => {
 		return (
 
 			<div>
-				<RenderOption option={s} selectOption={selectOption} />
+				<RenderOption
+					option={s}
+					selectOption={selectOption}
+				/>
 			</div>
 		)
 	})
 
 	const order = {
-		size : option,
-		qty : 1,
+		size: option,
+		qty: 1,
 	}
 
-	
+
 	return (
 		<div className="container">
 			<Row>
@@ -54,22 +57,22 @@ const ProductInfo = ({ data }) => {
 					<h1>Qty</h1>
 					<ButtonToolbar>
 						<ButtonGroup >
-							<Button style={{color : 'red', fontWeight : 'bold', fontSize : '1rem', backgroundColor : '#212529'}} >-</Button>
-							<Button style={{color : 'red', fontWeight : 'bold', fontSize : '1rem', backgroundColor : '#212529'}}>1</Button>
-							<Button style={{color : 'red', fontWeight : 'bold', fontSize : '1rem', backgroundColor : '#212529'}}>+</Button>
+							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }} >-</Button>
+							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>1</Button>
+							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>+</Button>
 						</ButtonGroup>
 					</ButtonToolbar>
 					<h1>Price : {found[0].price}</h1>
 
 					<h2>Your order</h2>
-					<p style={{fontSize : '1.5rem', fontWeight : 'bold' }} >
+					<p style={{ fontSize: '1.5rem', fontWeight: 'bold' }} >
 						size : {order.size} {" "}
-						qty : {order.qty} 
+						qty : {order.qty}
 					</p>
-					
+
 				</Col>
 
-				<Button style={{fontSize : '2rem', fontWeight : 'bold' }} color="warning"   onClick={() => alert(option)}>Checkout</Button>
+				<Button style={{ fontSize: '2rem', fontWeight: 'bold' }} color="warning" onClick={() => alert(option)}>Checkout</Button>
 
 			</Row>
 

@@ -32,11 +32,6 @@ const RenderCard = ({ data, showButton, linkTo }) => {
 						<CardBody>
 							<CardTitle>{data.name}</CardTitle>
 							<CardText>$ {data.price}</CardText>
-							{
-								showButton ?
-									<Button color='success'>Buy</Button>
-									: null
-							}
 						</CardBody>
 					</Card>
 
@@ -49,7 +44,11 @@ const Cards = (props) => {
 	const product = props.data.map(data => {
 		return (
 			<div className="col-md-4 col-lg-4 col-xl-4 my-2" key={data.id}>
-				<RenderCard data={data} showButton={props.showButton} linkTo={props.linkTo} />
+				<RenderCard
+					data={data}
+					showButton={props.showButton}
+					linkTo={props.linkTo}
+				/>
 			</div>
 		)
 	})
