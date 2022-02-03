@@ -5,7 +5,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-function RederCard({ data, showButton }) {
+function RederCard({ data, showButton  }) {
 	return (
 		<div>
 			<Card>
@@ -15,7 +15,7 @@ function RederCard({ data, showButton }) {
 						<CardTitle>{data.name}</CardTitle>
 						<CardText>$ {data.price}</CardText>
 						{
-							showButton ?
+							showButton  ?
 								<Button color='success'>Buy</Button>
 								: null
 						}
@@ -30,7 +30,7 @@ function Cards(props) {
 	const product = props.data.map(data => {
 		return (
 			<div className="col-md-4 col-lg-4 col-xl-4 my-2" key={data.id}>
-				<RederCard showButton={props.showButton} data={data} />
+				<RederCard data={data} showButton={props.showButton} />
 			</div>
 		)
 	})

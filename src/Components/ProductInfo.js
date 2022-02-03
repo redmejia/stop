@@ -1,13 +1,80 @@
-import {  useParams } from "react-router-dom";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { Button, ButtonGroup, ButtonToolbar, Col, Row } from "reactstrap";
 import Cards from "./Card";
-const ProductInfo = ({data}) => {
-	const { id  } = useParams()
-	const found = data.filter(product => product.id === +id)
-	return(
-		<div className="container">
-			<Cards showButton={false} data={found} />
+
+const RenderOption = ({ option, selectOption }) => {
+	return (
+		<div>
+			<ButtonToolbar>
+				<ButtonGroup>
+					<Button onClick={() => selectOption(option)}>{option}</Button>
+				</ButtonGroup>
+			</ButtonToolbar>
 		</div>
 	);
 }
+
+const ProductInfo = ({ data }) => {
+
+	const [option, selectOption] = useState(0);
+
+
+
+	const { id } = useParams()
+	const found = data.filter(product => product.id === +id)
+
+
+	const sizes = found[0].sizes.map(s => {
+		return (
+
+			<div>
+				<RenderOption option={s} selectOption={selectOption} />
+			</div>
+		)
+	})
+
+	const order = {
+		size : option,
+		qty : 1,
+	}
+
 	
+	return (
+		<div className="container">
+			<Row>
+				<Col sm="8">
+					<Cards showButton={false} data={found} />
+				</Col>
+				<Col sm="4">
+					<h1>Sizes</h1>
+					{sizes}
+					<h1>Qty</h1>
+					<ButtonToolbar>
+						<ButtonGroup>
+							<Button >-</Button>
+							<Button >1</Button>
+							<Button >+</Button>
+						</ButtonGroup>
+					</ButtonToolbar>
+					<h1>Price : {found[0].price}</h1>
+
+					<h2>Your order</h2>
+					<p style={{fontSize : '1.5rem', fontWeight : 'bold' }} >
+						size : {order.size} {" "}
+						qty : {order.qty} 
+					</p>
+					
+				</Col>
+
+				<Button style={{fontSize : '2rem', fontWeight : 'bold' }} color="warning"   onClick={() => alert(option)}>Checkout</Button>
+
+			</Row>
+
+
+
+		</div>
+	);
+}
+
 export default ProductInfo;
