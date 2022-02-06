@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Button, ButtonGroup, ButtonToolbar, Col, Row } from "reactstrap";
+import { Button, ButtonGroup, ButtonToolbar, Col, Row, Container } from "reactstrap";
 import Cards from "./Card";
 
 const RenderOption = ({ option, selectOption }) => {
@@ -46,39 +46,45 @@ const ProductInfo = ({ data }) => {
 
 
 	return (
-		<div className="container">
-			<Row>
-				<Col sm="8">
-					<Cards showButton={false} data={found} />
-				</Col>
-				<Col sm="4">
-					<h1>Sizes</h1>
-					{sizes}
-					<h1>Qty</h1>
-					<ButtonToolbar>
-						<ButtonGroup >
-							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }} >-</Button>
-							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>1</Button>
-							<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>+</Button>
-						</ButtonGroup>
-					</ButtonToolbar>
-					<h1>Price : {found[0].price}</h1>
 
-					<h2>Your order</h2>
-					<p style={{ fontSize: '1.5rem', fontWeight: 'bold' }} >
-						size : {order.size} {" "}
-						qty : {order.qty}
-					</p>
+		<Container
+			className="bg-light border"
+			fluid="lg"
+		>
+			<div >
+				<Row>
+					<Col sm="8">
+						<Cards showButton={false} data={found} />
+					</Col>
+					<Col sm="4">
+						<h1>Sizes</h1>
+						{sizes}
+						<h1>Qty</h1>
+						<ButtonToolbar>
+							<ButtonGroup >
+								<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }} >-</Button>
+								<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>1</Button>
+								<Button style={{ color: 'red', fontWeight: 'bold', fontSize: '1rem', backgroundColor: '#212529' }}>+</Button>
+							</ButtonGroup>
+						</ButtonToolbar>
+						<h1>Price : {found[0].price}</h1>
 
-				</Col>
+						<h2>Your order</h2>
+						<p style={{ fontSize: '1.5rem', fontWeight: 'bold' }} >
+							size : {order.size} {" "}
+							qty : {order.qty}
+						</p>
 
-				<Button style={{ fontSize: '2rem', fontWeight: 'bold' }} color="warning" onClick={() => alert(option)}>Checkout</Button>
+					</Col>
 
-			</Row>
+					<Button style={{ fontSize: '2rem', fontWeight: 'bold' }} color="warning" onClick={() => alert(option)}>Checkout</Button>
+
+				</Row>
 
 
 
-		</div>
+			</div>
+		</Container>
 	);
 }
 

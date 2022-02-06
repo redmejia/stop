@@ -37,6 +37,19 @@ export const data = [
 	}
 ]
 
+// Carousel images 
+export const images = [
+	{
+		key: 1,
+		src: "/assets/image/unsplash_one.jpg"
+	},
+	{
+		key: 2,
+		src: "/assets/image/unsplash_two.jpg"
+	}
+]
+
+
 // pants 
 export const pants = [
 	{
