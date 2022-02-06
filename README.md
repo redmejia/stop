@@ -1,2 +1,6 @@
 # Stop Portfolio Project 
-![stop-shirts](https://user-images.githubusercontent.com/51460153/152663560-4228ffe3-4d23-41ee-98a9-de75430dd9a5.png)
+# Home
+![stop-home](https://user-images.githubusercontent.com/51460153/152671630-1db39d57-f5b7-47fa-9182-c19abec5fdcf.png)
+
+
+
