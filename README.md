@@ -6,10 +6,10 @@
 ![stop-register-login](https://user-images.githubusercontent.com/51460153/152671846-e1267509-1de9-44ce-ace8-70c031a6fa64.png)
 
 # Navigation
-### Navigation Pants Option Link
+### Navigation Pants Option
 ![stop-pants](https://user-images.githubusercontent.com/51460153/152671685-ea244350-2f95-4eaa-9529-a8b35175ea08.png)
 
-### Navigation Shirts Option Link
+### Navigation Shirts Option
 ![stop-shirts](https://user-images.githubusercontent.com/51460153/152671758-96d2d688-986c-4a4f-8d42-3713ee666827.png)
 
 
