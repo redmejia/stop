@@ -124,7 +124,7 @@ export const shirts = [
 		id: 5,
 		name: "shirt6",
 		sizes: ['S', 'M', 'L'],
-		price: 19,
+		price: 53.54,
 		image: "/assets/image/seven-unsplash.jpg"
 	}
 ]
