@@ -15,8 +15,8 @@ const RenderCard = ({ data, showButton, linkTo }) => {
 						<Link to={`${linkTo}${data.name}/${data.id}`} style={{ color: 'red', textDecoration: 'none' }} >
 							<CardImg top width="100%" src={data.image} alt="Cardimage cap" />
 							<CardBody>
-								<CardTitle>{data.name}</CardTitle>
-								<CardText>$ {data.price}</CardText>
+								<CardTitle style={{ fontSize: '2rem', fontWeight : 'bold' }}>{data.name}</CardTitle>
+								<CardText style={{ fontSize: '1.5rem', fontWeight : 'bold' }} >$ {data.price}</CardText>
 								{
 									showButton ?
 										<Button color='success'>Buy</Button>
@@ -30,8 +30,8 @@ const RenderCard = ({ data, showButton, linkTo }) => {
 					<Card>
 						<CardImg top width="100%" src={data.image} alt="Cardimage cap" />
 						<CardBody>
-							<CardTitle>{data.name}</CardTitle>
-							<CardText>$ {data.price}</CardText>
+							<CardTitle style={{ fontSize: '2rem', fontWeight : 'bold' , color: 'red'  }}>{data.name}</CardTitle>
+							<CardText style={{ fontSize: '1.5rem', fontWeight : 'bold', color: 'red' }} >$ {data.price}</CardText>
 						</CardBody>
 					</Card>
 
