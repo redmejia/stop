@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
 	Card, CardImg, CardText, CardBody,
 	CardTitle, Button
@@ -5,7 +7,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-const RenderCard = ({ data, showButton, linkTo }) => {
+const RenderCard = ({ data, linkTo }) => {
 	console.log(linkTo);
 	return (
 		<div>
@@ -17,11 +19,7 @@ const RenderCard = ({ data, showButton, linkTo }) => {
 							<CardBody>
 								<CardTitle style={{ fontSize: '2rem', fontWeight : 'bold' }}>{data.name}</CardTitle>
 								<CardText style={{ fontSize: '1.5rem', fontWeight : 'bold' }} >$ {data.price}</CardText>
-								{
-									showButton ?
-										<Button color='success'>Buy</Button>
-										: null
-								}
+								<Button color='success'>Buy</Button>
 							</CardBody>
 						</Link>
 					</Card>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col, Container, UncontrolledCarousel } from "reactstrap";
 
 const Home = ({ images }) => {

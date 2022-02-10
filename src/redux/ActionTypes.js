@@ -1,0 +1,4 @@
+export const LOAD_PANTS_PRODUCT = 'LOAD_PANTS_PRODUCT';
+export const LOADING_PAGE = 'LOADING_PAGE';
+export const FAILD_LOADING =  'FAILD_LOADING';
+

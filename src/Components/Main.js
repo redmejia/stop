@@ -7,6 +7,7 @@ import Pants from './Pants';
 import Shirts from './Shirts'
 import ProductInfo from './ProductInfo';
 import Home from './Home';
+import { connect } from "react-redux";
 
 
 class Main extends React.Component {
@@ -20,15 +21,16 @@ class Main extends React.Component {
 	}
 
 	render() {
+		console.log(this.props.pants)
 		return (
 			<div>
 				<Headers />
 				<Switch>
-					<Route exact path="/" render={() => <Home images={this.state.images} />} />
-					<Route path="/pants" render={() => <Pants pants={this.state.pants} />} />
-					<Route path="/shirts" render={() => <Shirts  shirts={this.state.shirts} />} />
-					<Route exact path="/pro/pants/:name/:id" render={() => <ProductInfo data={this.state.pants} />} />
-					<Route exact path="/pro/shirts/:name/:id" render={() => <ProductInfo data={this.state.shirts} />} />
+					<Route exact path="/" render={() => <Home images={this.props.images} />} />
+					<Route path="/pants" render={() => <Pants pants={this.props.pants} />} />
+					<Route path="/shirts" render={() => <Shirts  shirts={this.props.shirts} />} />
+					<Route exact path="/pro/pants/:name/:id" render={() => <ProductInfo data={this.props.pants} />} />
+					<Route exact path="/pro/shirts/:name/:id" render={() => <ProductInfo data={this.props.shirts} />} />
 				</Switch>
 				<Footer />
 			</div>
@@ -36,4 +38,11 @@ class Main extends React.Component {
 	}
 }
 
-export default Main;
+const mapStateToProps = state => {
+	return{
+		images : state.images, 
+		pants : state.pants,
+		shirts : state.shirts
+	}
+}
+export default connect(mapStateToProps, null)(Main);
