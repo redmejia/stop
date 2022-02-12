@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Container, UncontrolledCarousel } from "reactstrap";
+// import { baseURL } from "../redux/baseURL";
 
 const Home = ({ images }) => {
 	return (
