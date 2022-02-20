@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from '@redux-devtools/extension';
-import looger from 'redux-logger'
+// import looger from 'redux-logger'
 import thunk from 'redux-thunk';
 import { Pants } from "../redux/reducers/pants";
 import { Shirts } from "../redux/reducers/shirts";
@@ -16,7 +16,7 @@ const rootReducer = combineReducers({
 export const ConfigureStore = () => {
 	const store = createStore(
 		rootReducer,
-		composeWithDevTools(applyMiddleware(thunk, looger))
+		composeWithDevTools(applyMiddleware(thunk))
 	)
 	return store
 }

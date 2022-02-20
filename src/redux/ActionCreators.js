@@ -49,7 +49,7 @@ export const loadingArrivalsProduct = images => ({
 })
 
 export const fetchImagesArrivalsProduct = () => dispatch => {
-	return fetch(baseURL + "images")
+	return fetch(baseURL + "arrivals") // images
 		.then(reponse => {
 			if (reponse.ok) {
 				return reponse

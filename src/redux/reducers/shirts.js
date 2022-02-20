@@ -7,7 +7,7 @@ const initState = {
 export const Shirts = (state = initState, action) => {
 	switch (action.type) {
 		case ActionsType.LOAD_SHIRTS_PRODUCT:
-			return {...state, shirts : action.payload}
+			return {...state, shirts : action.payload.shirts}
 		default:
 			return state;
 	}
