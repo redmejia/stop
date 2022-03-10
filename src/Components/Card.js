@@ -37,7 +37,7 @@ const RenderCard = ({ data, linkTo }) => {
 		</div>
 	);
 }
-
+// Cards and Card product info
 const Cards = (props) => {
 	const product = props.data.map(data => {
 		return (
